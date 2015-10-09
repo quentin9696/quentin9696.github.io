@@ -12,7 +12,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 			$.get('3data.csv', function(csv) {
-			    $('#container').highcharts({
+			    $('#3charts').highcharts({
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -55,7 +55,7 @@ $(document).ready(function() {
 			    });
 });
 			$.get('NRZ.csv', function(nrz) {
-			    $('#container').highcharts({
+			    $('#nrz').highcharts({
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -96,12 +96,101 @@ $(document).ready(function() {
 						}
 					}
 			    });
+});
+$.get('NRZT.csv', function(nrzt) {
+			    $('#nrzt').highcharts({
+			        exporting: {
+					chartOptions: { // specific options for the exported image
+						plotOptions: {
+							series: {
+								dataLabels: {
+									enabled: false
+								}
+							}
+						}
+					},
+					scale: 3,
+					fallbackToExportServer: false
+				},
+				chart: {
+			        	type: 'line'
+			        },
+				plotOptions: {
+          				series: {
+				                marker: {
+				                    enabled: false
+				                }
+            				}
+        			},
+			        data: {
+			            csv: nrzt
+			        },
+			        title: {
+						text: '1000000 bits - amplitude -1 1 - 10 echentillons par bit'
+					},
+					yAxis: {
+						title: {
+							text: 'TEB'
+						}
+					},
+					xAxis: {
+						title: {
+							text: 'SNR'
+						}
+					}
+			    });
+});
+$.get('RZ.csv', function(rz) {
+			    $('#rz').highcharts({
+			        exporting: {
+					chartOptions: { // specific options for the exported image
+						plotOptions: {
+							series: {
+								dataLabels: {
+									enabled: false
+								}
+							}
+						}
+					},
+					scale: 3,
+					fallbackToExportServer: false
+				},
+				chart: {
+			        	type: 'line'
+			        },
+				plotOptions: {
+          				series: {
+				                marker: {
+				                    enabled: false
+				                }
+            				}
+        			},
+			        data: {
+			            csv: rz
+			        },
+			        title: {
+						text: '1000000 bits - amplitude -1 1 - 10 echentillons par bit'
+					},
+					yAxis: {
+						title: {
+							text: 'TEB'
+						}
+					},
+					xAxis: {
+						title: {
+							text: 'SNR'
+						}
+					}
+			    });
 			});
 		});
 
 </script>
 </head>
 <body>
-<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="3charts" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="nrz" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="nrzt" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<div id="rz" style="width: 800px; height: 400px; margin: 0 auto"></div>
 </body>
 </html>
