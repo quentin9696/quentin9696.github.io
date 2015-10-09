@@ -40,38 +40,6 @@ $(document).ready(function() {
 					}
 			    });
 			});
-				
-			$.get('NRZT.csv', function(csv) {
-                            $('#container').highcharts({
-                                chart: {
-                                        type: 'line'
-                                },
-                                plotOptions: {
-                                        series: {
-                                                marker: {
-                                                    enabled: false
-                                                }
-                                        }
-                                },
-                                data: {
-                                    csv: csv
-                                },
-                                title: {
-                                                text: 'NRZT'
-                                        },
-                                        yAxis: {
-                                                title: {
-                                                        text: 'TEB'
-                                                }
-                                        },
-                                        xAxis: {
-                                                title: {
-                                                        text: 'SNR'
-                                                }
-                                        }
-                            });
-                        });
-			
 		});
 </script>
 </head>
