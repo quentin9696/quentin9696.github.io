@@ -8,11 +8,25 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
 		<script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 			$.get('NRZT.csv', function(csv) {
 			    $('#container').highcharts({
-			        chart: {
+			        exporting: {
+					chartOptions: { // specific options for the exported image
+						plotOptions: {
+							series: {
+								dataLabels: {
+									enabled: false
+								}
+							}
+						}
+					},
+					scale: 3,
+					fallbackToExportServer: false
+				},
+				chart: {
 			        	type: 'line'
 			        },
 				plotOptions: {
@@ -26,7 +40,7 @@ $(document).ready(function() {
 			            csv: csv
 			        },
 			        title: {
-						text: 'NRZT'
+						text: '1000000 bits - amplitude -1 1'
 					},
 					yAxis: {
 						title: {
@@ -40,8 +54,6 @@ $(document).ready(function() {
 					}
 			    });
 			});
-			
-			
 		});
 </script>
 </head>
