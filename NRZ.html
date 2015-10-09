@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Comparatif SNR/TEB</title>
+		
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+			$.get('NRZ.csv', function(csv) {
+			    $('#container').highcharts({
+			        chart: {
+			        	type: 'line'
+			        },
+				plotOptions: {
+          				series: {
+				                marker: {
+				                    enabled: false
+				                }
+            				}
+        			},
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'NRZ'
+					},
+					yAxis: {
+						title: {
+							text: 'TEB'
+						}
+					},
+					xAxis: {
+						title: {
+							text: 'SNR'
+						}
+					}
+			    });
+			});
+			
+			
+		});
+</script>
+</head>
+<body>
+<p>Hello world !</p>
+<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+</body>
+</html>
