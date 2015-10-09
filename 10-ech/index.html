@@ -53,8 +53,52 @@ $(document).ready(function() {
 						}
 					}
 			    });
+});
+			$.get('NRZ.csv', function(nrz) {
+			    $('#container').highcharts({
+			        exporting: {
+					chartOptions: { // specific options for the exported image
+						plotOptions: {
+							series: {
+								dataLabels: {
+									enabled: false
+								}
+							}
+						}
+					},
+					scale: 3,
+					fallbackToExportServer: false
+				},
+				chart: {
+			        	type: 'line'
+			        },
+				plotOptions: {
+          				series: {
+				                marker: {
+				                    enabled: false
+				                }
+            				}
+        			},
+			        data: {
+			            csv: nrz
+			        },
+			        title: {
+						text: '1000000 bits - amplitude -1 1 - 10 echentillons par bit'
+					},
+					yAxis: {
+						title: {
+							text: 'TEB'
+						}
+					},
+					xAxis: {
+						title: {
+							text: 'SNR'
+						}
+					}
+			    });
 			});
 		});
+
 </script>
 </head>
 <body>
