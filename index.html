@@ -13,7 +13,7 @@ $(document).ready(function() {
 			$.get('NRZ.csv', function(csv) {
 			    $('#container').highcharts({
 			        chart: {
-			        	type: 'column'
+			        	type: 'line'
 			        },
 			        data: {
 			            csv: csv
@@ -24,6 +24,11 @@ $(document).ready(function() {
 					yAxis: {
 						title: {
 							text: 'TEB'
+						}
+					},
+					xAxis: {
+						title: {
+							text: 'SNR'
 						}
 					}
 			    });
