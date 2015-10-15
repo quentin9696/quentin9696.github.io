@@ -13,7 +13,10 @@
 $(document).ready(function() {
 			$.get('3data.csv', function(csv) {
 			    $('#3charts').highcharts({
-			        exporting: {
+				credits: {
+					      enabled: false
+				},
+				exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
 							series: {
@@ -44,6 +47,7 @@ $(document).ready(function() {
 					},
 					yAxis: {
 						type: 'logarithmic',
+						minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -57,7 +61,10 @@ $(document).ready(function() {
 });
 			$.get('NRZ.csv', function(nrz) {
 			    $('#nrz').highcharts({
-			        exporting: {
+				credits: {
+					enabled: false
+				},
+				exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
 							series: {
@@ -88,6 +95,7 @@ $(document).ready(function() {
 					},
 					yAxis: {
 						type: 'logarithmic',
+						minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -101,7 +109,10 @@ $(document).ready(function() {
 });
 $.get('NRZT.csv', function(nrzt) {
 			    $('#nrzt').highcharts({
-			        exporting: {
+				credits: {
+					enabled: false
+				},
+				exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
 							series: {
@@ -132,6 +143,7 @@ $.get('NRZT.csv', function(nrzt) {
 					},
 					yAxis: {
 						type: 'logarithmic',
+						minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -145,6 +157,9 @@ $.get('NRZT.csv', function(nrzt) {
 });
 $.get('RZ.csv', function(rz) {
 			    $('#rz').highcharts({
+				credits: {
+					enabled: false
+				},
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -176,6 +191,7 @@ $.get('RZ.csv', function(rz) {
 					},
 					yAxis: {
 						type: 'logarithmic',
+						minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
