@@ -13,6 +13,9 @@
 $(document).ready(function() {
 			$.get('3data.csv', function(csv) {
 			    $('#3charts').highcharts({
+				    credits: {
+					                                                  enabled: false
+												                                  },
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -43,6 +46,8 @@ $(document).ready(function() {
 						text: '1000000 bits - amplitude -1 1 - 50 echantillons par bit'
 					},
 					yAxis: {
+						type: 'logarithmic',
+						minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -56,6 +61,9 @@ $(document).ready(function() {
 });
 			$.get('NRZ.csv', function(nrz) {
 			    $('#nrz').highcharts({
+				    credits: {
+					                                                  enabled: false
+												                                  },
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -86,6 +94,8 @@ $(document).ready(function() {
 						text: '1000000 bits - amplitude -1 1 - 50 echantillons par bit'
 					},
 					yAxis: {
+						type: 'logarithmic',
+                                                minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -99,6 +109,9 @@ $(document).ready(function() {
 });
 $.get('NRZT.csv', function(nrzt) {
 			    $('#nrzt').highcharts({
+				    credits: {
+					                                                  enabled: false
+												                                  },
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -129,6 +142,8 @@ $.get('NRZT.csv', function(nrzt) {
 						text: '1000000 bits - amplitude -1 1 - 50 echantillons par bit'
 					},
 					yAxis: {
+						type: 'logarithmic',
+                                                minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
@@ -142,6 +157,9 @@ $.get('NRZT.csv', function(nrzt) {
 });
 $.get('RZ.csv', function(rz) {
 			    $('#rz').highcharts({
+				    credits: {
+					                                                  enabled: false
+												                                  },
 			        exporting: {
 					chartOptions: { // specific options for the exported image
 						plotOptions: {
@@ -172,6 +190,8 @@ $.get('RZ.csv', function(rz) {
 						text: '1000000 bits - amplitude -1 1 - 50 echantillons par bit'
 					},
 					yAxis: {
+						type: 'logarithmic',
+                                                minorTickInterval: 0.1,
 						title: {
 							text: 'TEB'
 						}
