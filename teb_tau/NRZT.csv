@@ -1,4 +1,3 @@
-java -Xmx30G Simulateur  -mess  999999 -nbEch  50 -snr  -6  -seed  10  -ampl  -1  1  -form  NRZT
 tau,teb
 75, 0.0661030661030661
 76, 0.06602506602506603
