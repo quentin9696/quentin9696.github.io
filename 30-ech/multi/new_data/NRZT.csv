@@ -1,4 +1,3 @@
-java -Xmx30G Simulateur -mess 999999 -ampl -1 1 -form NRZT -seed 15 -ti 1 60 0.5 
 snr,NRZT
 -1.0, 5.46000546000546E-4
 -0.9, 4.95000495000495E-4

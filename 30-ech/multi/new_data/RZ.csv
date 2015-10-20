@@ -1,4 +1,3 @@
-java -Xmx30G Simulateur -mess 999999 -ampl -1 1 -form RZ -seed 15 -ti 1 60 0.5 
 snr,RZ
 8.0, 4.64000464000464E-4
 8.1, 4.15000415000415E-4
